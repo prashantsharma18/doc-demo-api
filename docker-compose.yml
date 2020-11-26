@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  doc-demo-api:
+    image: ${DOCKER_REGISTRY-}docdemoapi
+    build:
+      context: .
+      dockerfile: doc-demo-api/Dockerfile
+  demo-app-ui:
+    image: ${DOCKER_REGISTRY-}demoappapi
+    build:
+      context: ..
+      dockerfile: demo-app-ui/Dockerfile
